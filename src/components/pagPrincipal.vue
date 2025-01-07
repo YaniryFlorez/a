@@ -1,26 +1,28 @@
 <template>
 <div class="container">
     <div class="juego">
-        <div v-if="mostrarPP" class="pantallaP">
-    <div class="datos">
-        <h3>Puntaje:{{punt}}</h3>
-        <h3>Intentos:{{intent}}</h3>
-    </div>
-    <div class="ver">
-       <imagen :imagen="foto[0]" :nombre="nombres[0]"/>
-       <imagen :imagen="foto[1]" :nombre="nombres[1]"/>
-       <imagen :imagen="foto[2]" :nombre="nombres[2]"/>
-    </div>
+     <div v-if="mostrarPP" class="pantallaP">
+           <div class="datos">
+             <h3>Puntaje:{{punt}}</h3>
+             <h3>Intentos:{{intent}}</h3>
+           </div>
+           <div class="ver">
+              <imagen :imagen="foto[0]" :nombre="nombres[0]"/>
+              <imagen :imagen="foto[1]" :nombre="nombres[1]"/>
+              <imagen :imagen="foto[2]" :nombre="nombres[2]"/>
+           </div>
 
-    <div class="boton">
-       <button v-on:click="jugar()">Jugar</button>
-    </div>
-</div>
+           <div class="boton">
+             <button v-on:click="jugar()">Jugar</button>
+           </div>
+       </div>
+       
     <div v-if="mostrarP" class="mensajes">
         <h1>Has usado 5 intentos</h1>
         <h1>Juego Tetminado, Vuelve a intetar</h1>
         <button v-on:click="reiniciar()">Nuevo juego</button>
     </div>
+
     <div v-if="mostrarG" class="mensajes">
         <h1>Tu puntaje{{punt}}</h1>
         <h1>Has Ganado el premio</h1>

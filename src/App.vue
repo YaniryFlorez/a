@@ -1,17 +1,19 @@
 <template>
-  <pagPrincipal/>
+  <principalPokemon/>
   
 </template>
  
 <script>
 import Contador from './components/Contador.vue'
 import pagPrincipal from './components/pagPrincipal.vue'
+import principalPokemon from './components/principalPokemon.vue';
 
 export default {
   name: "App",
   components: {
     Contador,
     pagPrincipal,
+    principalPokemon,
     
   },
 };
